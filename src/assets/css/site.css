@@ -1,0 +1,35 @@
+:root {
+  --bs-primary: #6254d8;
+  --bs-primary-rgb: 98, 84, 216;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.hero {
+  background:
+    radial-gradient(ellipse at 85% 20%, rgba(98, 84, 216, 0.13), transparent 38%),
+    linear-gradient(180deg, #f8f7ff 0%, #fff 100%);
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(98, 84, 216, 0.12);
+}
+
+.feature-icon {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border-radius: 0.75rem;
+  background: rgba(98, 84, 216, 0.1);
+  color: var(--bs-primary);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.letter-spacing {
+  letter-spacing: 0.12em;
+}
