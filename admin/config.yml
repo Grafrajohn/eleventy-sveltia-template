@@ -23,41 +23,14 @@ collections:
       - { label: Body, name: body, widget: richtext }
   - name: pages
     label: Pages
-    files:
-      - name: home
-        label: Homepage
-        file: src/_data/home.json
-        fields:
-          - label: Hero
-            name: hero
-            widget: object
-            fields:
-              - { label: Eyebrow, name: eyebrow, widget: string }
-              - { label: Heading, name: heading, widget: string }
-              - { label: Highlighted heading text, name: headingAccent, widget: string }
-              - { label: Introduction, name: introduction, widget: text }
-              - { label: Button text, name: button, widget: string }
-              - { label: Card badge, name: cardBadge, widget: string }
-              - { label: Card heading, name: cardHeading, widget: string }
-              - { label: Card text, name: cardText, widget: text }
-          - label: About
-            name: about
-            widget: object
-            fields:
-              - { label: Heading, name: heading, widget: string }
-              - { label: Text, name: text, widget: text }
-          - label: Highlights
-            name: highlights
-            widget: object
-            fields:
-              - { label: Eyebrow, name: eyebrow, widget: string }
-              - { label: Heading, name: heading, widget: string }
-              - { label: Introduction, name: introduction, widget: string }
-              - label: Cards
-                name: cards
-                widget: list
-                min: 3
-                max: 3
-                fields:
-                  - { label: Heading, name: heading, widget: string }
-                  - { label: Text, name: text, widget: text }
+    label_singular: Page
+    folder: src/pages
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime }
+      - { label: Description, name: description, widget: text, required: false }
+      - { label: Body, name: body, widget: richtext }
