@@ -8,6 +8,19 @@ media_folder: src/assets/uploads
 public_folder: /assets/uploads
 
 collections:
+  - name: posts
+    label: Posts
+    label_singular: Post
+    folder: src/posts
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime }
+      - { label: Description, name: description, widget: text, required: false }
+      - { label: Body, name: body, widget: richtext }
   - name: pages
     label: Pages
     files:

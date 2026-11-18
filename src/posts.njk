@@ -1,0 +1,30 @@
+---
+layout: layout.njk
+title: Posts
+description: Stories and updates from Fieldnotes.
+permalink: /posts/index.html
+---
+<section class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <h1 class="display-5 fw-bold">Posts</h1>
+      {% if collections.posts | length %}
+        <div class="mt-4">
+          {% for post in collections.posts | reverse %}
+            <article class="border-bottom py-4">
+              <p class="text-body-secondary small mb-2">
+                <time datetime="{{ post.date | htmlDate }}">{{ post.date | readableDate }}</time>
+              </p>
+              <h2 class="h4"><a href="{{ post.url | escape }}" class="text-decoration-none">{{ post.data.title | escape }}</a></h2>
+              {% if post.data.description %}
+                <p class="text-body-secondary mb-0">{{ post.data.description | escape }}</p>
+              {% endif %}
+            </article>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="text-body-secondary mt-4">No posts yet.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>

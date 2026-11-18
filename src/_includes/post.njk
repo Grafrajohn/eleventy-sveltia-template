@@ -1,0 +1,15 @@
+---
+layout: layout.njk
+---
+<article class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <a href="/posts/" class="text-decoration-none">&larr; All posts</a>
+      <h1 class="display-5 fw-bold mt-4">{{ title | escape }}</h1>
+      <p class="text-body-secondary">
+        <time datetime="{{ page.date | htmlDate }}">{{ page.date | readableDate }}</time>
+      </p>
+      <div class="mt-4">{{ content | safe }}</div>
+    </div>
+  </div>
+</article>

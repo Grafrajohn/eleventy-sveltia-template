@@ -41,3 +41,7 @@ and select the project root. Local changes must be committed and pushed separate
 See the [local workflow guide](https://sveltiacms.app/en/docs/workflows/local) for details.
 
 Uploaded media is stored in `src/assets/uploads` in the repository and served from `/assets/uploads`.
+
+Use **Posts** in the CMS to create and edit Markdown posts in `src/posts`. Each post has a title,
+date, optional description, and body. Posts appear newest first at `/posts/` and are published at
+`/posts/<slug>/` after the site rebuilds. The date is displayed in UTC.
