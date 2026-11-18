@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "eyebrow": "A place to begin",
+    "heading": "Make room for",
+    "headingAccent": "what's next.",
+    "introduction": "A thoughtful little corner of the web for sharing ideas, learning, and making things that matter.",
+    "button": "Explore the site",
+    "cardBadge": "A fresh start",
+    "cardHeading": "Small steps. Good things.",
+    "cardText": "Built with Eleventy and Bootstrap, ready for your words, work, and ideas."
+  },
+  "about": {
+    "heading": "A simple space to share",
+    "text": "Use this starter as a home for your portfolio, project, or publication. The structure stays out of the way while you make it your own."
+  },
+  "highlights": {
+    "eyebrow": "Start exploring",
+    "heading": "A few possibilities",
+    "introduction": "A flexible foundation for whatever comes next.",
+    "cards": [
+      {
+        "heading": "Thoughtful stories",
+        "text": "Publish notes, essays, and discoveries worth passing along."
+      },
+      {
+        "heading": "Work in progress",
+        "text": "Showcase what you're making and the ideas behind it."
+      },
+      {
+        "heading": "Open possibilities",
+        "text": "Add new pages and make this starter fit your own direction."
+      }
+    ]
+  }
+}

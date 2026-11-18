@@ -7,19 +7,19 @@ description: A clean, simple starting point for your next idea.
   <div class="container py-4">
     <div class="row align-items-center g-5">
       <div class="col-lg-7">
-        <p class="text-uppercase fw-semibold text-primary small letter-spacing">A place to begin</p>
-        <h1 class="display-3 fw-bold">Make room for <span class="text-primary">what's next.</span></h1>
+        <p class="text-uppercase fw-semibold text-primary small letter-spacing">{{ home.hero.eyebrow | escape }}</p>
+        <h1 class="display-3 fw-bold">{{ home.hero.heading | escape }} <span class="text-primary">{{ home.hero.headingAccent | escape }}</span></h1>
         <p class="lead text-body-secondary mt-3">
-          A thoughtful little corner of the web for sharing ideas, learning, and making things that matter.
+          {{ home.hero.introduction | escape }}
         </p>
-        <a class="btn btn-primary btn-lg mt-3" href="#highlights">Explore the site</a>
+        <a class="btn btn-primary btn-lg mt-3" href="#highlights">{{ home.hero.button | escape }}</a>
       </div>
       <div class="col-lg-5">
         <div class="hero-card p-4 p-md-5 rounded-4 shadow-sm">
-          <span class="badge rounded-pill text-bg-primary mb-3">A fresh start</span>
-          <h2 class="h3 fw-semibold">Small steps. Good things.</h2>
+          <span class="badge rounded-pill text-bg-primary mb-3">{{ home.hero.cardBadge | escape }}</span>
+          <h2 class="h3 fw-semibold">{{ home.hero.cardHeading | escape }}</h2>
           <p class="mb-0 text-body-secondary">
-            Built with Eleventy and Bootstrap, ready for your words, work, and ideas.
+            {{ home.hero.cardText | escape }}
           </p>
         </div>
       </div>
@@ -30,10 +30,9 @@ description: A clean, simple starting point for your next idea.
 <section id="about" class="container py-5">
   <div class="row justify-content-center text-center">
     <div class="col-lg-8">
-      <h2 class="fw-bold">A simple space to share</h2>
+      <h2 class="fw-bold">{{ home.about.heading | escape }}</h2>
       <p class="text-body-secondary mt-3 mb-0">
-        Use this starter as a home for your portfolio, project, or publication. The structure stays out of the way
-        while you make it your own.
+        {{ home.about.text | escape }}
       </p>
     </div>
   </div>
@@ -42,39 +41,23 @@ description: A clean, simple starting point for your next idea.
 <section id="highlights" class="container py-5">
   <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-end gap-2 mb-4">
     <div>
-      <p class="text-uppercase fw-semibold text-primary small letter-spacing mb-2">Start exploring</p>
-      <h2 class="fw-bold mb-0">A few possibilities</h2>
+      <p class="text-uppercase fw-semibold text-primary small letter-spacing mb-2">{{ home.highlights.eyebrow | escape }}</p>
+      <h2 class="fw-bold mb-0">{{ home.highlights.heading | escape }}</h2>
     </div>
-    <p class="text-body-secondary mb-0">A flexible foundation for whatever comes next.</p>
+    <p class="text-body-secondary mb-0">{{ home.highlights.introduction | escape }}</p>
   </div>
   <div class="row g-4">
+    {% for card in home.highlights.cards %}
     <div class="col-md-4">
       <article class="card h-100 border-0 shadow-sm">
         <div class="card-body p-4">
-          <div class="feature-icon mb-3">01</div>
-          <h3 class="h5 card-title fw-semibold">Thoughtful stories</h3>
-          <p class="card-text text-body-secondary">Publish notes, essays, and discoveries worth passing along.</p>
+          <div class="feature-icon mb-3">0{{ loop.index }}</div>
+          <h3 class="h5 card-title fw-semibold">{{ card.heading | escape }}</h3>
+          <p class="card-text text-body-secondary">{{ card.text | escape }}</p>
         </div>
       </article>
     </div>
-    <div class="col-md-4">
-      <article class="card h-100 border-0 shadow-sm">
-        <div class="card-body p-4">
-          <div class="feature-icon mb-3">02</div>
-          <h3 class="h5 card-title fw-semibold">Work in progress</h3>
-          <p class="card-text text-body-secondary">Showcase what you're making and the ideas behind it.</p>
-        </div>
-      </article>
-    </div>
-    <div class="col-md-4">
-      <article class="card h-100 border-0 shadow-sm">
-        <div class="card-body p-4">
-          <div class="feature-icon mb-3">03</div>
-          <h3 class="h5 card-title fw-semibold">Open possibilities</h3>
-          <p class="card-text text-body-secondary">Add new pages and make this starter fit your own direction.</p>
-        </div>
-      </article>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
