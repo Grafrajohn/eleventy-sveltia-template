@@ -1,6 +1,6 @@
-# Fieldnotes
+# Eleventy Sveltia Template
 
-A minimal Eleventy 3 site styled with Bootstrap 5.3.
+A minimal Eleventy 3 site styled with Bootstrap 5.3 and using the Sveltia CMS.
 
 ## Get started
 
@@ -45,3 +45,7 @@ Uploaded media is stored in `src/assets/uploads` in the repository and served fr
 Use **Posts** in the CMS to create and edit Markdown posts in `src/posts`. Each post has a title,
 date, optional description, and body. Posts appear newest first at `/posts/` and are published at
 `/posts/<slug>/` after the site rebuilds. The date is displayed in UTC.
+
+This project deliberately avoids too few npm packages to break upgrades of eleventy. It is designed to be simple.
+
+I intend to improve this template as I go along.
